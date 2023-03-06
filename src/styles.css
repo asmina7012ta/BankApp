@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(./assets/istockphoto-1033817528-612x612.jpeg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    background-attachment: fixed;
+    }
+header{
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(24, 93, 114);
+
+}
+footer{
+    color: aqua;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:rgb(24, 93, 114);
+}
