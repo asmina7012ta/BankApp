@@ -19,9 +19,34 @@ export class LoginComponent  {
   1002:{username:"ziya",acno:1002,password:"123zi45",balance:0},
   1003:{username:"raza",acno:1003,password:"raza456",balance:0}
  }
- login(){
-  var acnum=this.acno
-  var psw=this.psw
+//  login(){
+//   var acnum=this.acno
+//   var psw=this.psw
+//   var userDetails=this.userDetails
+//   if(acnum in userDetails){
+//     if(psw==userDetails[acnum]["password"]){
+// alert("login sucssuss")
+//     }else{
+//       alert("incorrect password")
+//     }
+
+//   } else{
+//     alert("user not registerd")
+//   }
+//   // alert('login worked')
+//  }
+//  acChanged(event:any){
+//   this.acno=event.target.value
+  
+//  }
+//  passChanged(event:any){
+//   this.psw=event.target.value
+  
+//  }
+ 
+login(acnum:any,psw:any){
+  var acnum=acnum.value
+  var psw=psw.value
   var userDetails=this.userDetails
   if(acnum in userDetails){
     if(psw==userDetails[acnum]["password"]){
@@ -35,14 +60,4 @@ alert("login sucssuss")
   }
   // alert('login worked')
  }
- acChanged(event:any){
-  this.acno=event.target.value
-  
- }
- passChanged(event:any){
-  this.psw=event.target.value
-  
- }
- 
-
 }
