@@ -1,10 +1,20 @@
-<div class="mt-3 ps-3" style="color: teal;"><h3>{{data}}</h3></div>
+<div class="mt-3 ps-3" style="color: teal;">
+  <h3>{{data}}</h3>
+</div>
 <h1 class="  text-center mt-5" style="color: rgb(26, 91, 91);" >SIGN IN</h1>
 
-    <form  action=""class="container w-50 border text-center mt-2 " style="border-radius: 10px; background-color: rgba(24, 93, 114, 0.579);">
+     <form  action=""class="container w-50 border text-center mt-2 " style="border-radius: 10px; background-color: rgba(24, 93, 114, 0.579);">
     <input id="u1" [(ngModel)]="acno" name="acnum" type="text" [placeholder]="data1" class="form-control mt-5" >
       <input id="p1" [(ngModel)]="psw" name="password" type="password" placeholder="password" class="form-control mt-3" > 
-      <button (click)="login()" type="button" class="btn btn-info mt-3 text-center mb-3 ">login</button>
+      <button (click)="login()" type="button" class="btn btn-info mt-3 text-center mb-3 ">
+        login
+      </button>
+      <p class="mt-2 text-white" style="color: bisque;">
+        don't have account?
+        <a style="text-decoration: none; color: rgb(22, 55, 56);" routerLink="register">
+        <strong>  create account</strong>
+        </a>
+      </p>
     </form>
 
 

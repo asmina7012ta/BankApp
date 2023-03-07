@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventType } from '@angular/router';
+import { EventType, Router, RouteReuseStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,15 +19,21 @@ export class LoginComponent  {
   1002:{username:"ziya",acno:1002,password:"123zi45",balance:0},
   1003:{username:"raza",acno:1003,password:"raza456",balance:0}
  }
+ constructor(private router:Router){
+
+ }
+
  login(){
   var acnum=this.acno
   var psw=this.psw
   var userDetails=this.userDetails
   if(acnum in userDetails){
     if(psw==userDetails[acnum]["password"]){
-alert("login sucssuss")
+    alert("login sucssuss")
+      this.router.navigateByUrl("dashboard")
     }else{
       alert("incorrect password")
+     
     }
 
   } else{
